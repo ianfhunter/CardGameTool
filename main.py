@@ -1,7 +1,15 @@
+import sys
 from PIL import Image, ImageFont, ImageDraw, ImageEnhance
 
-CARD_HEIGHT = 1125
-CARD_WIDTH = 825
+from physical_sizes import *
+
+if len(sys.argv) <= 1 or sys.argv[1] == "Standard":
+    CARD_HEIGHT = STANDARD[0]
+    CARD_WIDTH = STANDARD[1]
+else:
+    print("Unsupported")
+    quit()
+
 CARD_COLOR = "darkred"
 CARD_HEADER_HEIGHT = 100
 CARD_IMAGE_AREA_HEIGHT = 400
