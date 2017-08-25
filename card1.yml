@@ -1,0 +1,16 @@
+cat:
+ - CARD_DESCRIPTION: "This is a good cat. Lorum Ipsum"
+ - CARD_DESCRIPTION_2: "Global Effect; Aww"
+ - CARD_VALUE_LEFT: 12
+ - CARD_VALUE_RIGHT: 11
+ - TITLE: "Card Title"
+ - FOCUS_IMAGE: 'test2.jpg'
+
+dog:
+ - CARD_DESCRIPTION: "This is a good dog. Lorum Ipsum"
+ - CARD_DESCRIPTION_2: "Global Effect; Wuf"
+ - CARD_VALUE_LEFT: 22
+ - CARD_VALUE_RIGHT: 31
+ - TITLE: "Card Title2"
+ - FOCUS_IMAGE: 'test.jpg'
+
