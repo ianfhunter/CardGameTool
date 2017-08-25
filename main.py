@@ -4,7 +4,7 @@ from physical_sizes import *
 from card_layout import *
 import yaml
 
-with open("card1.yml", 'r') as stream:
+with open("card_details.yml", 'r') as stream:
     try:
         data = yaml.load(stream) 
     except yaml.YAMLError as exc:
@@ -17,10 +17,13 @@ for idx, card in enumerate(data):
     CARD_VALUE_LEFT    = data[card][2]['CARD_VALUE_LEFT']
     CARD_VALUE_RIGHT   = data[card][3]['CARD_VALUE_RIGHT']
     TITLE              = data[card][4]['TITLE']
+    FOCUS_IMAGE        = data[card][5]['FOCUS_IMAGE']
+    
+    print(FOCUS_IMAGE)
 
     source_img = Image.new("RGB", (CARD_WIDTH, CARD_HEIGHT), "white")
     draw = ImageDraw.Draw(source_img)
-    draw.rectangle(((0, 0), (CARD_WIDTH, CARD_HEADER_HEIGHT )), fill=CARD_COLOR)   # Bacjground Color
+    draw.rectangle(((0, 0), (CARD_WIDTH, CARD_HEADER_HEIGHT )), fill=CARD_COLOR)   # Background Color
     draw.rectangle(((0, CARD_HEADER_HEIGHT + CARD_IMAGE_AREA_HEIGHT), (CARD_WIDTH, CARD_HEIGHT )), fill=CARD_COLOR)   # Background Color
 
     font = ImageFont.truetype(FONT, FONT_SIZE)
@@ -33,7 +36,7 @@ for idx, card in enumerate(data):
 
     draw.text((CARD_DESCRIPTION_INSERT, CARD_HEADER_HEIGHT + CARD_IMAGE_AREA_HEIGHT + CARD_DESCRIPTION_MARGIN + CARD_DESCRIPTION_HEIGHT), CARD_DESCRIPTION_2, font=font)
 
-    img = Image.open('test2.jpg', 'r')
+    img = Image.open(FOCUS_IMAGE, 'r')
     img_w, img_h = img.size
     offset = ((CARD_WIDTH - img_w)/ 2, CARD_HEADER_HEIGHT + 100 )
     source_img.paste(img, offset)

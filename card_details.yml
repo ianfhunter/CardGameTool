@@ -1,0 +1,16 @@
+cat:
+ - CARD_DESCRIPTION: "Not Only did Gatherers collect fruits and berries, but shellfish,\n eggs, nuts and discarded kills. With the use of tools, they were\n able to expand to more elusive resources. \n\nGain a Hunter-Gatherer for your tribe."
+ - CARD_DESCRIPTION_2: "Global Effect:\n A harsh season has caused a famine in the local tribes.\n Remove a single free resource from all players if possible."
+ - CARD_VALUE_LEFT: ""
+ - CARD_VALUE_RIGHT: 2
+ - TITLE: "Hunter-Gatherer"
+ - FOCUS_IMAGE: '/home/ian/pCloudDrive/Personal/Projects/Card Games/Tribe/v2 Icons/noun_740.jpg'
+
+dog:
+ - CARD_DESCRIPTION: "This is a good dog. Lorum Ipsum"
+ - CARD_DESCRIPTION_2: "Global Effect; Wuf"
+ - CARD_VALUE_LEFT: 22
+ - CARD_VALUE_RIGHT: 31
+ - TITLE: "Card Title2"
+ - FOCUS_IMAGE: 'test.jpg'
+
